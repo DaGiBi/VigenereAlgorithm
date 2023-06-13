@@ -5,70 +5,85 @@
 		<meta charset="utf-8">
 		<script src="script.js"></script>
 		<link rel="stylesheet" href="style.css">
+		<style>
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			h1 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+			.guide {
+				margin-bottom: 20px;
+			}
+			
+			.formSection {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 20px;
+			}
+			
+			.formSection button {
+				margin: 0 10px;
+				padding: 10px 20px;
+				border-radius: 5px;
+				background-color: #4caf50;
+				color: #fff;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+			
+			.textSection {
+				margin-bottom: 20px;
+			}
+			
+			.teamMembers {
+				margin-bottom: 10px;
+			}
+			
+			footer {
+				text-align: center;
+				margin-top: 20px;
+				color: #888;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Vigenère Cipher</h1>	
-		<div class="guide">
-			<!-- <p>Add the key, then add your text or cipher.</p>
-			<p>Print the table to check the characteres range below.</p>
-			<p>Use min ASCII value as 32 to include space charactere in your text.</p>
-			<p>Use max ASCII value as 123 to include lowercase char in your text.</p> -->
+		<div class="container">
+			<h1>Vigenère Cipher</h1>	
+			<div class="guide">
+				<!-- <p>Add the key, then add your text or cipher.</p>
+					<p>Print the table to check the characteres range below.</p>
+					<p>Use min ASCII value as 32 to include space charactere in your text.</p>
+					<p>Use max ASCII value as 123 to include lowercase char in your text.</p> -->
+			</div>
+			
+			<div class="formSection">
+				<button onclick="window.location.href = 'encrypt.html';">Encrypt Page</button>
+				<button onclick="window.location.href = 'decrypt.html';">Decrypt Page</button>
+			</div>
+			
+			<div class="textSection">
+				<h2>CSC666 Group Project</h2>
+				<p>CS2306A</p>
+			</div>
+			
+			<div class="textSection">
+				<h3>Team Members:</h3>
+				<ul class="teamMembers">
+					<li>Mohamad Najib</li>
+					<li>Amirul Fahmi</li>
+					<li>Wani Irdina</li>
+					<li>Nazathul Aqma</li>
+				</ul>
+			</div>
+			
+			<footer></footer>
 		</div>
-		
-		<div class="formSection">
-			<div class="card">
-				<br>
-					<label for="texto">Plain Text</label>	
-				<br>
-				<textarea id="plainText" placeholder="text"></textarea>
-			</div>
-			<div class="card" >
-				<br>
-					<label for="chave">Key</label>
-				<br>
-				<textarea id="key" placeholder="key"></textarea>
-			</div>
-			<div class="card" >
-				<br>
-					<label for="cifra">Cipher</label>
-				<br>
-				<textarea id="cipherKey" placeholder="cipher" ></textarea>
-			</div>
-		</div>
-
-		<div class="submitSection">
-			<div class="cardButton">
-				<input type="button" name="" onclick="encrypt()"	value="Encrypt">
-			</div>
-			<div class="cardButton">
-				<input type="button" name="" onclick="decrypt()" value="Decrypt">
-			</div>
-		</div>
-		<div class="asciiSection">
-			<div class="card" >
-				<p>
-					Min ASCII value:
-				</p>
-				<input type="text" id="minASCII" name="minASCII" value="65">
-			</div>
-			<div class="card">
-				<p>
-					Max ASCII value:
-				</p>
-				<input type="text" id="maxASCII" name="maxASCII" value="91">
-			</div>
-		</div>
-		
-		
-		
-		
-		<div class="card">
-			<input type="button" name="" onclick="printTable();" value="Print table">
-			<p>Vigenère Table:</p>
-			<table border="solid black" id="ascii"></table>
-		</div>
-		
-		<footer></footer>
-
 	</body>
 </html>
